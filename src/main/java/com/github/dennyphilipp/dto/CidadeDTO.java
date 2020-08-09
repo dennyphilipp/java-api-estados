@@ -27,7 +27,34 @@ public class CidadeDTO {
     private long idEstado;
     private  String siglaEstado;
     private  String regiaoNome;
+
+    public long getIdEstado() {
+        return idEstado;
+    }
+
+    public String getSiglaEstado() {
+        return siglaEstado;
+    }
+
+    public String getRegiaoNome() {
+        return regiaoNome;
+    }
+
+    public String getNomeCidade() {
+        return nomeCidade;
+    }
+
+    public String getNomeMesorregiao() {
+        return nomeMesorregiao;
+    }
+
+    public String getNomeFormatado() {
+        return nomeFormatado;
+    }
+
     private  String nomeCidade;
     private  String nomeMesorregiao;
     private  String nomeFormatado;
+
+
 }
