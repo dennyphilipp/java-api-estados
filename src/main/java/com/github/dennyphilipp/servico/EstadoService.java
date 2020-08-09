@@ -1,7 +1,7 @@
 package com.github.dennyphilipp.servico;
 
 import com.github.dennyphilipp.dto.EstadoDTO;
-import com.github.dennyphilipp.terceiro.IIGBEEstado;
+import com.github.dennyphilipp.terceiro.IIBGEEstado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
@@ -16,7 +16,7 @@ public class EstadoService {
 
     @Lazy
     @Autowired
-    private IIGBEEstado ibgeEstado;
+    private IIBGEEstado ibgeEstado;
 
     @Cacheable
     public List<EstadoDTO> obterTodos() {

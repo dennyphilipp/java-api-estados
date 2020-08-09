@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@FeignClient(name = "IIGBEEstado", url = "https://servicodados.ibge.gov.br", fallback = FallBackIGBEEstado.class)
-public interface IIGBEEstado {
+@FeignClient(name = "IIBGEEstado", url = "https://servicodados.ibge.gov.br", fallback = FallBackIGBEEstado.class)
+public interface IIBGEEstado {
 
     @GetMapping(value = "api/v1/localidades/estados")
     List<EstadoDTO> obterTodos();
