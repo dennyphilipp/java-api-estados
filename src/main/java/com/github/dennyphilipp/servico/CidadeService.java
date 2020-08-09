@@ -18,13 +18,13 @@ public class CidadeService {
     @Autowired()
     private IIBGECidade ibgeCidade;
 
-    @Cacheable
+    @Cacheable(unless = "#result == null or #result.size() == 0")
     public List<CidadeDTO> obterPorEstado(String uf) {
 
         return this.ibgeCidade.obterPorEstado(uf.toLowerCase());
     }
 
-    @Cacheable
+    @Cacheable(unless = "#result == null or #result.size() == 0")
     public List<CidadeDTO> obterTodos() {
 
         return this.ibgeCidade.obterTodos();

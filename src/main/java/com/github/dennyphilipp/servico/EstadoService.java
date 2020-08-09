@@ -18,7 +18,7 @@ public class EstadoService {
     @Autowired
     private IIBGEEstado ibgeEstado;
 
-    @Cacheable
+    @Cacheable(unless = "#result == null or #result.size() == 0")
     public List<EstadoDTO> obterTodos() {
         return this.ibgeEstado.obterTodos();
     }
