@@ -1,5 +1,6 @@
 package com.github.dennyphilipp.api.api.interfaces;
 
+import com.github.dennyphilipp.dto.CidadeDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,5 +16,10 @@ public interface ICidadeController {
 
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value="/obter-por-estado/{uf}", method= RequestMethod.GET)
-    public abstract ResponseEntity<List<Object>> obterPorEstado(@PathVariable(value = "uf", required = true) String uf);
+    public abstract ResponseEntity<List<CidadeDTO>> obterPorEstado(@PathVariable(value = "uf", required = true) String uf);
+
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(value="/obter-todos", method= RequestMethod.GET)
+    public abstract ResponseEntity<List<CidadeDTO>> obterTodos();
+
 }

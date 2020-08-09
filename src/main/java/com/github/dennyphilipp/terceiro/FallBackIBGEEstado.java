@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @Slf4j
 
-public class FallBackIGBEEstado implements IIBGEEstado {
+public class FallBackIBGEEstado implements IIBGEEstado {
     @Override
     public List<EstadoDTO> obterTodos() {
         log.error("Fallback IGBE Estado, retorna lista padrao");

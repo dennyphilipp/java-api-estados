@@ -1,6 +1,7 @@
 package com.github.dennyphilipp.api.api;
 
 import com.github.dennyphilipp.api.api.interfaces.ICidadeController;
+import com.github.dennyphilipp.dto.CidadeDTO;
 import com.github.dennyphilipp.servico.CidadeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -19,7 +20,14 @@ public class CidadeController implements ICidadeController {
     private CidadeService cidadeService;
 
     @Override
-    public ResponseEntity<List<Object>> obterPorEstado(@PathVariable(value = "uf", required = true) String uf) {
+    public ResponseEntity<List<CidadeDTO>> obterPorEstado(@PathVariable(value = "uf", required = true) String uf) {
         return ResponseEntity.ok(this.cidadeService.obterPorEstado(uf));
     }
+
+    @Override
+    public ResponseEntity<List<CidadeDTO>> obterTodos() {
+        return ResponseEntity.ok(this.cidadeService.obterTodos());
+
+    }
+
 }
