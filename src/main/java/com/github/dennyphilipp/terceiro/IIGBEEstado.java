@@ -12,6 +12,6 @@ import java.util.List;
 @FeignClient(name = "IIGBEEstado", url = "https://servicodados.ibge.gov.br", fallback = FallBackIGBEEstado.class)
 public interface IIGBEEstado {
 
-    @GetMapping(value = "/api/v1/localidades/estados")
+    @GetMapping(value = "api/v1/localidades/estados")
     List<EstadoDTO> obterTodos();
 }
