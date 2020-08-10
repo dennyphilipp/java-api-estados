@@ -17,10 +17,7 @@ public class CidadeRelatorio {
     }
 
     public ByteArrayOutputStream Gerar() throws DocumentException {
-
-        try {
-
-            Document documento = new Document(PageSize.A4, 5, 5, 5, 5);
+        Document documento = new Document(PageSize.A4, 5, 5, 5, 5);
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PdfWriter.getInstance(documento, out);
         documento.open();
@@ -28,10 +25,6 @@ public class CidadeRelatorio {
         inserirCidades(documento);
         documento.close();
         return out;
-
-        } catch (Exception ex) {
-            return  null;
-        }
     }
 
     private void inserirCidades(Document documento) throws DocumentException {
