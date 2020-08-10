@@ -23,10 +23,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CidadeServicoTeste {
 
     @Autowired
-    CidadeService cidadeService;
+    private CidadeService cidadeService;
 
     @Mock
-    IIBGECidade iibgeCidade;
+    private IIBGECidade iibgeCidade;
 
     @Test
     public void injetarDependenciaSucesso()  {

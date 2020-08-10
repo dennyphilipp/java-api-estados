@@ -20,10 +20,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ActiveProfiles("teste")
 public class EstadoServicoTeste {
     @Autowired
-    EstadoService estadoService;
+    private EstadoService estadoService;
 
     @Mock
-    IIBGEEstado ibgeEstado;
+    private IIBGEEstado ibgeEstado;
 
     @Test
     public void injetarDependenciaSucesso()  {

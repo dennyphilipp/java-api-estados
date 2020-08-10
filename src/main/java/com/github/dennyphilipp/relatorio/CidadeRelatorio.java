@@ -6,17 +6,21 @@ import com.itextpdf.text.pdf.PdfDocument;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 public class CidadeRelatorio {
+    private static final Logger logger = LoggerFactory.getLogger(CidadeRelatorio.class);
     private final List<CidadeDTO> lista;
     public CidadeRelatorio(List<CidadeDTO> lista) {
         this.lista = lista;
     }
 
     public ByteArrayOutputStream Gerar() throws DocumentException {
+        logger.info("Inicio gerando relatorio cidade");
         Document documento = new Document(PageSize.A4, 5, 5, 5, 5);
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         PdfWriter.getInstance(documento, out);
@@ -28,6 +32,8 @@ public class CidadeRelatorio {
     }
 
     private void inserirCidades(Document documento) throws DocumentException {
+        logger.info("Inserir cidades relatoio cidade");
+
         PdfPTable tabela = new PdfPTable(5);
         PdfPCell coluna = new PdfPCell(new Phrase("UF"));
         coluna.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -81,6 +87,8 @@ public class CidadeRelatorio {
     }
 
     private void inserirTitulo(Document documento) throws DocumentException {
+        logger.info("Inserir titulo relatoio cidade");
+
         PdfPTable tabela = new PdfPTable(1);
         PdfPCell coluna = new PdfPCell(new Phrase("RELATÓRIO DE CIDADES"));
         coluna.setHorizontalAlignment(Element.ALIGN_CENTER);
