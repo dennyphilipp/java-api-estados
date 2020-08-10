@@ -1,9 +1,11 @@
 package com.github.dennyphilipp.dto;
 
 import lombok.Data;
+import lombok.Getter;
 
 
 @Data
+@Getter
 public class EstadoDTO {
 
     public EstadoDTO () {

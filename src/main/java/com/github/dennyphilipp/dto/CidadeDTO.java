@@ -3,12 +3,13 @@ package com.github.dennyphilipp.dto;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.github.dennyphilipp.dto.json.JSONCidadeDTO;
 import lombok.Data;
+import lombok.Getter;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @Data
-@XmlRootElement
 @JsonDeserialize(using = JSONCidadeDTO.class)
+@Getter
 public class CidadeDTO {
 
     public  CidadeDTO() {
@@ -27,31 +28,6 @@ public class CidadeDTO {
     private long idEstado;
     private  String siglaEstado;
     private  String regiaoNome;
-
-    public long getIdEstado() {
-        return idEstado;
-    }
-
-    public String getSiglaEstado() {
-        return siglaEstado;
-    }
-
-    public String getRegiaoNome() {
-        return regiaoNome;
-    }
-
-    public String getNomeCidade() {
-        return nomeCidade;
-    }
-
-    public String getNomeMesorregiao() {
-        return nomeMesorregiao;
-    }
-
-    public String getNomeFormatado() {
-        return nomeFormatado;
-    }
-
     private  String nomeCidade;
     private  String nomeMesorregiao;
     private  String nomeFormatado;
