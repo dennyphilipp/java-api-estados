@@ -17,4 +17,4 @@
 - http://localhost:8080/app/api/cidade/obter-por-estado/{uf}
 - http://localhost:8080/app/api/cidade/gerar-pdf/{uf}
 - http://localhost:8080/app/api/estado/obter-todos
-- Pode ser usando o projeto de frontend em Vue junto com essa api https://github.com/dennyphilipp/vue-estados
+- Pode ser usado o projeto de frontend em Vue junto com essa api https://github.com/dennyphilipp/vue-estados
